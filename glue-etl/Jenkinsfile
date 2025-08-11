@@ -1,0 +1,52 @@
+pipeline {
+    agent any
+
+    environment {
+        S3_BUCKET = 'sandy-1947'  // replace with your real S3 bucket name
+        AWS_REGION = 'us-east-2'               // your AWS region
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/sandeepsure/sandeep-sure.git'
+            }
+        }
+
+        stage('Debug Workspace') {
+            steps {
+                bat 'dir /s /b'
+            }
+        }
+
+        stage('Verify Files Exist') {
+            steps {
+                bat '''
+                if exist *.csv (dir *.csv) else (echo No CSV files found in workspace root!)
+                if exist *.py (dir *.py) else (echo No Python files found in workspace root!)
+                '''
+            }
+        }
+
+        stage('Upload to S3') {
+            steps {
+                withAWS(region: "us-east-2", credentials: 'aws') {
+                    // Use Windows batch variable syntax %S3_BUCKET%
+                    bat """
+                    aws s3 sync . s3://%S3_BUCKET%/ \
+                    --exclude "*" \
+                    --include "*.csv" \
+                    --include "*.py" \
+                    --exact-timestamps
+                    """
+                }
+            }
+        }
+    }
+
+    post {
+        failure {
+            echo "❌ Pipeline failed! Check the console output for errors."
+        }
+    }
+}
