@@ -1,0 +1,31 @@
+Company,Revenue,Expenses,Profit,Region,Currency,Notes,Profit Margin,Approval Status
+Gamma Ltd,,NaN,,Asia,EUR,Needs audit,,Rejected
+Gamma Ltd,134886,56265,78621,Europe,JPY,Needs audit,0.58,Rejected
+Gamma Ltd,NaN,71962,,Africa,EUR,Needs audit,,Rejected
+Epsilon SA,NaN,66023,,North America,GBP,Pending review,,Approved
+Gamma Ltd,121090,51685,69405,Europe,GBP,Needs audit,0.57,Rejected
+Gamma Ltd,,50769,,Europe,EUR,,,Rejected
+Alpha Corp,139735,52433,87302,Asia,JPY,Pending review,0.62,Rejected
+Alpha Corp,,NaN,,North America,EUR,Confirmed,,Pending
+Gamma Ltd,,,,South America,GBP,Pending review,,Pending
+Epsilon SA,NaN,56396,,Europe,INR,Confirmed,,Approved
+Alpha Corp,,NaN,,South America,EUR,Confirmed,,Rejected
+Epsilon SA,NaN,,,Asia,INR,Confirmed,,Pending
+Alpha Corp,,,,Europe,EUR,,,Approved
+Epsilon SA,,,,Asia,INR,Confirmed,,Pending
+Epsilon SA,NaN,51267,,South America,GBP,Pending review,,Pending
+Alpha Corp,111551,61394,50157,North America,GBP,Pending review,0.45,Pending
+Delta LLC,149092,NaN,,Africa,INR,Confirmed,,Pending
+Beta Inc,121606,,,Europe,INR,Pending review,,Approved
+Alpha Corp,NaN,58792,,North America,JPY,Needs audit,,Rejected
+Delta LLC,,NaN,,South America,USD,Needs audit,,Pending
+Alpha Corp,NaN,NaN,,South America,INR,Confirmed,,Pending
+Alpha Corp,NaN,,,Asia,INR,Pending review,,Approved
+Gamma Ltd,97159,,,Europe,INR,Confirmed,,Approved
+Gamma Ltd,NaN,NaN,,Asia,USD,Needs audit,,Rejected
+Epsilon SA,,NaN,,Asia,EUR,,,Approved
+Beta Inc,,NaN,,South America,JPY,,,Approved
+Alpha Corp,,,,South America,EUR,Pending review,,Pending
+Alpha Corp,89692,,,Africa,USD,Needs audit,,Rejected
+Delta LLC,,,,South America,GBP,Pending review,,Rejected
+Epsilon SA,112606,61534,51072,Europe,INR,,0.45,Pending
