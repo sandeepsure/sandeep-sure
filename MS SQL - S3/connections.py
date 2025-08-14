@@ -26,8 +26,8 @@ df['date_only'] = df['LoginTime'].dt.date
 # Step 4: S3 client
 s3 = boto3.client(
     's3',
-    aws_access_key_id='AKIA6BVYVZXK6MS3N4P7',
-    aws_secret_access_key='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',
+    aws_access_key_id='',
+    aws_secret_access_key='',
     region_name='us-east-2'
 )
 
@@ -47,3 +47,4 @@ for date_value, group in df.groupby('date_only'):
 
 # Close SQL connection
 conn.close()
+
